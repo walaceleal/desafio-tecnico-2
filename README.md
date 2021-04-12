@@ -1,31 +1,49 @@
-# Adonis fullstack application
+# Desafio Técnico
+Este é o resultado do desafio proposto. Devido a limitações de tempo:
+- Desenvolvi um  Layout extremamente básico
+- Não escrevi os testes, validações ou feedbacks que deveriam ser implementados
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+### Tecnologias
+* [AdonisJs]
+* [NodeJs]
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+### URL de Teste
+* [walaceleal.com.br]
 
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
+### Instalação
+Preencha os dados do .env
 ```js
-adonis migration:run
+HOST=127.0.0.1
+PORT=3333
+NODE_ENV=development
+APP_URL=http://${HOST}:${PORT}
+CACHE_VIEWS=false
+APP_KEY=
+DB_CONNECTION=sqlite
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_DATABASE=adonis
+SESSION_DRIVER=cookie
+HASH_DRIVER=bcrypt
 ```
+Instale as dependências, execute as migrações e inicie o servidor.
+```sh
+$ npm install
+$ adonis migration:run
+$ adonis serve --dev
+```
+
+### Rotas
+Todas as rotas do backend são prefixadas de `/api`
+- listar : `GET /tarefa`
+- criar : `POST /tarefa`
+- atualizar : `PUT /tarefa/:id`
+- detalhar : `GET /tarefa/:id`
+- deletar : `DELETE /tarefa/:id`
+
+[AdonisJs]: <http://adonisjs.com/>
+[NodeJs]: <https://nodejs.org/>
+[Walace Leal]: <https://www.99freelas.com.br/user/walaceleal>
+[walaceleal.com.br]: <http://walaceleal.com.br:3334/>
