@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Desafio Técnico 2</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  {{script('js/codigo.js')}}
+  {{style('css/estilo.css')}}
+</head>
+<body>
+  <div id="container">
+    <div id="tarefas">
+      <button id="add" onclick="editar(null)">Add</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Título</th>
+            <th>Status</th>
+            <th>Alterado em:</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="edicao">
+      <input type="text" name="id" hidden>
+
+      <label for="titulo">Título</label>
+      <input id="titulo" type="text" name="titulo">
+
+      <label for="descricao">Descrição</label>
+      <textarea rows="3" id="descricao" type="text" name="descricao"></textarea>
+
+      <label for="status">Status</label>
+      <select id="status"  name="status">
+        <option value="0">Em Andamento</option>
+        <option value="1">Concluído</option>
+      </select>
+
+      <button class="salvar" onclick="enviar(event)">Salvar</button>
+      <button onclick="carregar(event)">Voltar</button>
+      <button class="deletar" onclick="deletar(event)">Deletar</button>
+  </div>
+  </div>
+</body>
+</html>

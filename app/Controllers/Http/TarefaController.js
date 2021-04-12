@@ -16,7 +16,7 @@ class TarefaController {
    * POST tarefas
    */
   async store ({ request, response }) {
-    const dados = request.only(["titulo", "descricao"]);
+    const dados = request.only(["titulo", "descricao", "status"]);
     await Tarefa.create(dados);
   }
 

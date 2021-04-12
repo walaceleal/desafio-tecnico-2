@@ -9,9 +9,8 @@ class TarefaSchema extends Schema {
       table.increments()
       table.timestamps()
       table.string('titulo')
-      table.string('status')
+      table.integer('status')
       table.string('descricao')
-      table.string('data_conclusao')
     })
   }
 

@@ -2,4 +2,5 @@
 
 const Route = use('Route');
 
-Route.resource('/tarefa', 'TarefaController').apiOnly();;
+Route.resource('/api/tarefa', 'TarefaController').apiOnly();
+Route.on('/').render('tarefas');

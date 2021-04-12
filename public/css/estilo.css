@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto 0;
+    padding: 5px 20px 10px;
+    background: #e3f5e6;
+    border-radius: 10px;
+  }
+
+  #tarefas {
+    width: 100%;
+  }
+
+  #add {
+    margin: 5px 0;
+    padding: 0 4px;
+  }
+
+  table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    border-bottom: 1px solid black;
+  }
+
+  td {
+    cursor: pointer;
+    padding: 2px 0;
+  }
+
+  label {
+      width: 100px;
+      display: inline-block;
+  }
+
+  #edicao {
+      width: 100%;
+      display: none;
+      flex-direction: column;
+  }
+
+  #edicao button {
+    margin: 3px 0;
+  }
+  
+  #edicao .deletar {
+    background: red;
+    border-color: white;
+    color: white;
+    margin: 20px 0;
+  }
+  #edicao .salvar {
+    margin-top: 60px;
+  }
+
+  input, select, textarea {
+    margin-bottom: 8px;
+    padding: 2px;
+  }
+
+  textarea {
+    resize: none;
+    padding: 4px;
+  }
